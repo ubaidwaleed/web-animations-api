@@ -6,10 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         #box{
             height: 400px;
             width: 400px;
             background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -21,9 +30,9 @@
         var elem =document.querySelector('#box');
         elem.animate(
     [
-        {transform:'scale(0.5)', background:'white'},
-        {transform:'scale(1)',background:'darkcyan'},
-        {transform:'scale(0.5)',background:'white' }
+        {transform:'scale(0.5)', background:'white',color:'white'},
+        {transform:'scale(1)',background:'darkcyan',color:'black'},
+        {transform:'scale(0.5)',background:'white',color:'white' }
     ]
     ,{duration:4000,
     iterations:Infinity})
