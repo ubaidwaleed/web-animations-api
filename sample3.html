@@ -9,21 +9,21 @@
         #box{
             height: 400px;
             width: 400px;
-            background-color: aqua;
+            background-color: white;
         }
     </style>
 </head>
 <body>
     <div id="box">
-
+        <h2>Hellooo</h2>
     </div>
     <script>
         var elem =document.querySelector('#box');
         elem.animate(
     [
-        {transform:'scale(0.5)'},
-        {transform:'scale(1)'},
-        {transform:'scale(0.5)'}
+        {transform:'scale(0.5)', background:'white'},
+        {transform:'scale(1)',background:'darkcyan'},
+        {transform:'scale(0.5)',background:'white' }
     ]
     ,{duration:4000,
     iterations:Infinity})
