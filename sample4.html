@@ -17,16 +17,23 @@
     <img src="./rain.gif" id="barish" alt="barish ho rhi hai">
     <script>
         var elem=document.querySelector('#barish');
-        elem.animate([
-            {transform:'translate(0,50px)'},
-            {transform:'translate(400px,80px)'},
-            {transform:'translate(800px,50px)'},
-            {transform:'translate(400px,80px)'},
-            {transform:'translate(0,50px)'}
+        var animatedElem=elem.animate([
+            {transform:'translate(0,20px)'},
+            {transform:'translate(550px,80px)'},
+            {transform:'translate(83vw,20px)'},
+            {transform:'translate(550px,80px)'},
+            {transform:'translate(0,20px)'}
         ],
             {
             duration:4000,
             iterations:Infinity
+        })
+
+        document.addEventListener("mousedown",()=>{
+            animatedElem.pause();
+        })
+        document.addEventListener("mouseup",()=>{
+            animatedElem.play();
         })
     </script>
 </body>
