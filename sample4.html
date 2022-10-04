@@ -8,10 +8,26 @@
     <style>
         body{
             background-image: url('./bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
         }
     </style>
 </head>
 <body>
     <img src="./rain.gif" id="barish" alt="barish ho rhi hai">
+    <script>
+        var elem=document.querySelector('#barish');
+        elem.animate([
+            {transform:'translate(0,50px)'},
+            {transform:'translate(400px,80px)'},
+            {transform:'translate(800px,50px)'},
+            {transform:'translate(400px,80px)'},
+            {transform:'translate(0,50px)'}
+        ],
+            {
+            duration:4000,
+            iterations:Infinity
+        })
+    </script>
 </body>
 </html>
